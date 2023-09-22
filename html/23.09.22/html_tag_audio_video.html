@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>AUDIO</h3>
+    <audio src="../media/Kalimba.mp3" controls autoplay></audio>
+    <!-- source 태그 사용으로 MP3 확장자와 OGG 확장자 모두 지원 -->
+    <audio controls loop>
+        <source src="../media/Kalimba.ogg" type="audio/ogg"/>
+        <source src="../media/Kalimba.mp3" type="audio/mp3"/>
+    </audio>
+    <hr/>
+    <h3>VIDEO</h3>
+    <!-- autoplay 자동재생인데 비디오는 소리를 듣기 싫어하는 사람이 있을 수 있기 때문에 자동 재생이 안됨 하지만 muted를 넣으면 뮤트 된 상태에서 자동 재생이 가능하다. -->
+    <video src="../media/Wildlife.mp4" width="400" controls autoplay muted></video><br/>
+    <!-- poster = 재생 안될 시 대체 이미지 -->
+    <video poster="../img/bonobono.jpg" width="500" height="300" loop controls muted autoplay>
+        <!-- source 태그 사용으로 MP3 확장자와 OGG 확장자 모두 지원 -->
+        <source src="../media/Wildlife.webm" type="video/webm"/>
+        <source src="../media/Wildlife.mp4" type="video/mp4"/>
+    </video>
+    <video poster="../img/bonobono.jpg" width="500" height="300" loop controls muted autoplay>
+        <source src="../../media/Wildlife.webm" type="video/webm"/>
+        <source src="../../media/Wildlife.mp4" type="video/mp4"/>
+    </video>
+    <hr/>
+    <!-- iframe = 외부에 있는 페이지를 넣어주는 태그 -->
+    <iframe width="885" height="498" src="https://www.youtube.com/embed/LqME1y6Mlyg" title="[𝐖𝐎𝐑𝐊&amp;𝐉𝐀𝐙𝐙] 사무실에서 일하다가 몰래 리듬타기 좋은 펑키한 재즈비지엠😎💖 l Relaxing Jazz Piano Music for Office, Work, Study" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</body>
+</html>
