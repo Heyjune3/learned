@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- action = 전송위치 -->
+    <!-- get = text에 입력한 값이 주소창에 뜸 -->
+    <form action="html_tag_ifarme.html" method="get">
+        <!-- post = text에 입력 한 값이 주소창에서 가려짐 -->
+        <!-- <form action="html_tag_ifarme.html" method="post"> -->
+            <!-- value = 사용자가 입력하지 않아도 입력해줌 -->
+            <!-- required = 입력 필수값, 입력란이 공백일 경우 다음으로 넘어가지 않음 -->
+        <input type="text" name="id" value="id001" required/><br/>
+        <!-- disabled, readonly = 사용자가 수정못하게 함 -->
+        <!-- disabled = get방식일 때도 post 처럼 주소창에서 가려짐 -->
+        <!-- readonly = 읽기전용 -->
+        <input type="text" name="temp1" value="100" disabled/><br/>
+        <input type="text" name="temp2"value="200" readonly/><br/>
+        <br/>
+        <!-- fieldset = 내부의 입력 요소를 묶어 주는 역할 -->
+        <fieldset disabled>
+            <!-- legend = select박스 이름 -->
+            <legend>SELECT BOX</legend>
+            <select name="fruits">
+                <option>오렌지</option>
+                <!-- selected = 미리 지정 -->
+                <option selected>사과</option>
+                <option>한라봉</option>
+            </select>
+            <!-- multiple = 한 번에 창을 띄워줌 -->
+            <select name="hobby" multiple>
+                <optgroup label="GAME">
+                <option>LOL</option>
+                <option>고급시계</option>
+                <option>로스트아크</option>
+                </optgroup>
+                <optgroup label="STUDY">
+                    <option>HTML</option>
+                    <option>JAVA</option>
+                    <option>경제</option>
+                </optgroup>
+            </select>
+        </fieldset>
+        <br/>
+        <h3>Data List</h3>
+        <!-- 출력할 목록 지정 -->
+        <input list="depList" name="dept"/>
+        <datalist id="depList">
+            <option value="컴퓨터공학과"></option>
+            <option value="영어영문학과"></option>
+            <option value="경영학과"></option>
+            <option value="사회체육과"></option>
+        </datalist>
+        <br/>
+        <hr/>
+        <h3>파일 입력 필드</h3>
+        <!-- file = 파일 첨부 -->
+        <input type="file"/>
+        <!-- accept = 수용할 수 있는 파일 -->
+        <!-- image/* 에서 *는 모든 이라는 뜻 -->
+        <!-- multiple = 여러가지 선택 가능 -->
+        <input type="file" accept="image/*" multiple/>
+        <input type="file" accept="text/*"/>
+        <input type="file" accept=".pdf/"/>
+        <br/>
+        <!-- 여러줄로 입력 가능 -->
+        <textarea cols="30" row="5" name="content">aaaa</textarea>
+        <br/>
+        <!-- submit 은 입력된 값을 전달, 전송해줌 -->
+        <!-- 입력 후 제출을 누르면 주소창에 name이 뜸 -->
+        <button type="submit">제출</button>
+        <!-- button 은 자바스크립트 작업까지 들어가야 됨 -->
+        <button type="button">TEST</button>
+    </form>
+</body>
+</html>
