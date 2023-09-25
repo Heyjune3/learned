@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table child</title>
+    <style>
+        /* 
+        안되는 이유 : table 의 자식요소는 thead, tbody, tfoot
+        tbody는 table 내에서 자동생성 되기 때문
+        */
+        table > tr > td{
+            color: blue;
+        }
+        /* 
+        되게 하려면
+        table > tbody > tr > td{
+            color: blue;
+        }
+        or
+        table tr td{
+            color: blue;
+        }
+        or
+        tr > td{
+            color: blue;
+        }
+        or
+        */
+        table td{
+            color: skyblue;
+        }
+        table th{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>좋아하는 과일</th>
+            <th>싫어하는 과일</th>
+            <th>기타</th>
+        </tr>
+        <tr>
+            <td>오렌지</td>
+            <td>포도</td>
+            <td>망고</td>
+        </tr>
+    </table>
+</body>
+</html>
