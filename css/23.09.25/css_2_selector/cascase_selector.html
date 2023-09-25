@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SELECTOR</title>
     <style>
+        /* 위에 있더라도 * 과 같이 전체가 밑에 있다 하더라도
+        h1 처럼 상세하게 지정되어 있는 선택자가 적용됨 */
+        h1{
+            color: green;
+        }
         *{
             color: greenyellow;
-        }
-        h1{
-            color: red;
         }
         /* 
             id 속성 = # id 속성 값
@@ -49,6 +51,7 @@
 </head>
 <body>
     <h1>TYPE 선택자</h1>
+    <h3>선택자 적용</h3>
     <!-- id 속성에 부여되는 값은 2개 이상 중복 불가능. class 는 가능 -->
     <h2 id="bg">선택자 적용</h2>
     <!-- id 속성에 값을 2개 입력 시 2개 다 무시 됨 -->
