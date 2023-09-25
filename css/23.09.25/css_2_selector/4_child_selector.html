@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>child</title>
+    <style>
+        /* class 이름이 header인 요소 안에 div요소 중에 h1 */
+        .header div h1{
+            background-color: blue;
+        }
+        
+        /* class 이름이 header인 요소의 후손 (전체) */
+        .header h1{
+            background-color: skyblue;
+            color: red;
+        }
+
+        /* class 이름이 header인 요소의 자손 */
+        .header > h1{
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <!-- div.header -->
+    <div class="header">
+        <h1>lorem ipsum</h1>
+        <!-- div#nav -->
+        <div id="nav">
+            <h1>Navigation</h1>
+        </div>
+    </div>
+    <div class="daummy">
+        <h1>DUMMY</h1>
+    </div>
+</body>
+</html>
