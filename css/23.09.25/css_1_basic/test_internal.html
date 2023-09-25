@@ -1,0 +1,46 @@
+<!-- 
+    Cascading Style Sheet
+    internal style sheet
+    내부 스타일 시트
+    test_internal.html
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내부 스타일 시트</title>
+    <!-- 선택자 : 선택적 지정 -->
+    <style>
+        h1{
+            background-color: beige;
+             /*
+              색상 rgb = 3원색을 조합해서 만듬 r=red, g=green, b=blue(html 색상표)
+
+                  red   green   blue
+             rgb(0~255, 0~255, 0~255)
+              */
+             
+            color: rgb(0,124,128);
+            /* 16진법 : 16개의 숫자 조합으로 표현
+                #00 ff ff
+                */
+            color: #ff0000;
+            color: #000000;
+            color: #ffffff;
+        }
+
+        h2{
+            color: #00ff00;
+        }
+    </style>
+ </head>
+ <body>
+    <h1>internal css</h1>
+    <h1>internal css</h1>
+    <h1>internal css</h1>
+    <h2>internal css h2</h2>
+    <h2>internal css h2</h2>
+    <h2>internal css h2</h2>
+ </body>
+ </html>
