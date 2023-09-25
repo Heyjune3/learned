@@ -1,0 +1,31 @@
+<!-- 
+    외부 스타일 시트 
+    test_external.html 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>외부스타일시트</title>
+    <!-- link 외부 스타일 시트 css 파일 불러오기 -->
+    <!-- link 태그 rel(relation) 속성 = 현재 문서와 외부 리소스 사이의 연관 관계를 명시 -->
+    <link rel="stylesheet" href="test.css"/>
+    <style>
+        /* 위에서 아래로 해석해서 내려오기 때문에 같은 게 있으면 씌워짐.
+        위쪽에 link rel이 /style 보다 밑으로 내려오면 link rel이 씌워지게 됨. */
+        h1{
+            color: white;
+        }
+        h2{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color: black;">외부스타일시트</h1>
+    <h1>외부스타일시트</h1>
+    <h2>외부스타일시트 2</h2>
+    <h2>외부스타일시트 2</h2>
+</body>
+</html>
