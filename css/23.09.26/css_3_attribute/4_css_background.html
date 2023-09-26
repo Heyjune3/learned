@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경</title>
+    <style>
+        body{
+            background-image:url(../../../html/img/rice.png) ;
+            /* repeat = 반복 */
+            background-repeat: repeat;
+            /* repeat-x = x좌표, -y = y 좌표 */
+            /*
+            background-repeat: repeat-x;
+            background-repeat: repeat-y;
+            background-repeat: no-repeat;
+            */
+            /* top bottom left right center */
+            background-position: center;
+            background-position: top right;
+            /* 위 body의 높이를 1700px로 지정해서 보면 스크롤이 생김 */
+            height:1700px;
+            /* scroll(기본값 - default) or fixed */
+            background-attachment: scroll;
+            /* fixed로 고정하면 스크롤이 움직이더라도 이미지가 화면에 고정 */
+            background-attachment: fixed;
+            background-size: 150px;
+            /* background-size: 넓이 높이 */
+            background-size: 150px 100px;
+        }
+        .bg{
+            /* rgb'a' = a는 투명도 0.0~1.0 */
+        background-color: rgba(100, 30, 50, 0.5);
+        width: 300px;
+        height: 300px;
+    }
+
+    .img{
+        background-image: url(../../../html/img/intro/logo.png);
+        /* background-color에 사이즈를 맞춤 */
+        background-repeat: no-repeat;
+        background-size: 300px;
+        width: 30%;
+        /* contain : 지정한 요소 안에 배경 이미지가 다 들어오도록 이미지를 확대/축소 */
+        background-size: contain;
+        /* 지정한 요소를 다 덮도록 배경이미지를 확대/축소 */
+        background-size: cover;
+
+        background: pink url(../../../html/img/intro/lion.png)
+        /* 작성 후 이미지 사이즈를 변경하고 싶다. / px or 단위 */
+        no-repeat top 50% right 50% / 70px;
+        /* background-color: rgba(255, 192, 203, 0.5); */
+        /* 이미지의 투명도를 설정 */
+        opacity: 0.5;
+    }
+
+    </style>
+</head>
+<body>
+    <div class="bg">
+        <img src="../../../html/img/bonobono.jpg" width="200" height="200" alt="보노보노 이미지"/>
+    </div>
+    <div class="img bg">
+        <h1>CONTENT SPACE</h1>
+    </div>
+</body>
+</html>
