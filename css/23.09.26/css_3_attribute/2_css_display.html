@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            background-color: skyblue;
+            width: 150px;
+            height: 150px;
+            display: block;
+        }
+
+        h2{
+            background-color: aqua;
+            width: 150px;
+            height: 150px;
+            /*
+             display : inline = inline 속성처럼 적용
+                     = inline 속성처럼 박스 크기변경 x             
+             */
+            display: inline;
+            /* inline-block = inline 속성속에 block 속성처럼 크기 변경 가능하게 바꿔줌 */
+            display: inline-block;
+        }
+
+        h2.none{
+            display: none;
+        }
+
+        h2.hidden{
+            /* visible:hidden = 공간은 남겨두고 숨긴다. */
+            visibility:hidden;
+        }
+    </style>
+</head>
+<body>
+    <!-- h2{inline요소-$}*5 -->
+    <h2>inline요소-1</h2>
+    <h2>inline요소-2</h2>
+    <h2 class="none">inline요소-3</h2>
+    <h2 class="hidden">inline요소-4</h2>
+    <h2>inline요소-5</h2>
+
+    <!-- h1{BLOCK요소-$}*5 -->
+    <h1>BLOCK요소-1</h1>
+    <h1>BLOCK요소-2</h1>
+    <h1>BLOCK요소-3</h1>
+    <h1>BLOCK요소-4</h1>
+    <h1>BLOCK요소-5</h1>
+</body>
+</html>
