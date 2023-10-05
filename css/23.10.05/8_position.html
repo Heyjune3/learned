@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+        .box1{
+            /* static = position default 값 */
+            position: static;
+            width: 500px;
+            height: 500px;
+            background-color: gray;
+            margin-bottom: 50px;
+        }
+        /* margin 좌우는 상관없지만 위 아래는 마진이 병합 된다. */
+        .absolute_parent{
+            position: static;
+            /* absolute와 relative는 앞과 뒤도 사용(한글 문서 사진첨부에 글자 앞으로 사진 넣기, 글자 뒤로 넣기) */
+            /* absolute : 3차원으로 표현(절대위치좌표) */
+            position: absolute;
+            /* relative : 2차원과 3차원을 나눠줌 */
+            position: relative;
+            margin-top: 100px;
+            width: 500px;
+            height: 500px;
+            background-color: blue;
+            /* 
+            절대 좌표로 위치 지정
+            top bottom,
+            left right
+            */
+            top: 50px;
+            left: 30px;
+        }
+        .absolute_child{
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+        }
+        .fixed{
+            position:fixed;
+            top: 50px;
+            right: 50px;
+            width: 50px;
+            height: 50px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="absolute_parent">
+        <div class="absolute_child"></div>
+    </div>
+    <div class="fixed"></div>
+</body>
+</html>
