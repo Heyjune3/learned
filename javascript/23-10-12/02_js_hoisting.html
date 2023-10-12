@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+            hoisting - 상단으로 끌어 올리다
+
+            var 변수명; 으로 선언 된 변수의 선언부는 script의 최상단부로 이동 된다.
+
+            함수(function)의 선언부는 script의 최상단부로 이동되어 script내부에서 어디서나 호출이 가능하다.
+        */
+        test();
+
+        //var temp;
+        console.log(temp);
+        temp = "천재";
+        console.log(temp);
+        var temp ="이준호";
+        console.log(temp);
+
+        //let
+        let temp2="이준호2"; //hoisting이 일어나지 않음
+        console.log(temp2);
+
+        function test(){ /* 함수의 선언이 되면 눈에 보이진 않지만 스크립트 최 상위로 이동*/
+            alert('test alert!');
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
