@@ -1,0 +1,57 @@
+<DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8"/>
+    <title>for sum</title>
+    <script>
+        // 1. 초기화식 ex) let i = 0; 최초에 한번만 수행
+        // 2. 조건식을 비교, 조건식의 결과가 참이면 블럭안의 수행문 실행
+        //     ex) i < 10;
+        // 3. 증감식 수행 ex); i++
+        // 2 ~ 3 반복 수행
+        // 4.조건식을 비교, 조건식의 결과가 거짓이면 반복문(for)을 종료
+        let even = 0,   // 짝수 합계
+            odd = 0,    // 홀수 합계
+            i = 0,      // 증가하는 값을 저장하는 변수
+            sum= 0;     // 전체 합계
+        //홀수 합계
+        for(i = 1; i <= 100; i+=2){
+            odd = odd + i;
+        }
+        //짝수 합계
+        for(i = 2; i <= 100; i = i+2){
+            even += i;
+        }
+
+        //전체 합계
+        for(i = 1; i <= 100; i++){
+            sum = sum +i;
+        }
+        /////////////////////////////////////////////////////////////////
+        odd = 0, even = 0, sum = 0;
+        for(i = 1; i <= 100; i++){
+            if(i % 2 == 0){
+                even+=i;
+            }
+            if(i % 2 == 1){
+                odd += i;
+            }
+            sum +=i;
+        }
+        /////////////////////////////////////////////////////////////////
+        odd = even = sum = 0;
+        for(i = 1; i < 100; i+=2){
+            odd += i;
+            even += (i+1);
+        }
+        sum = odd + even;
+
+
+        document.write(`홀수 합계 : ${odd} <br/>`);
+        document.write(`짝수 합계 : ${even} <br/>`);
+        document.write(`전체 합계 : ${sum} <br/>`);
+    </script>
+</head>
+<body>
+</body>
+</html>

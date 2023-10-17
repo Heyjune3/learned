@@ -1,0 +1,38 @@
+<DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8"/>
+    <title>숫자 맞추기 게임</title>
+    <script>
+    let guess = 78;     // 정답 숫자
+
+    let isRun = true;   // 반복문 탈출 flag
+    /* 
+    -flag = 반복문 전체를 수행하고 난 뒤에 사용자가 아래쪽 alert(msg + " - 추측 횟수 : " + count); 알림을 받고 탈출해야 한다고 하면 flag를 사용 
+    = 모든 수행부가 완료 된 후 조건식에서 반복여부결정
+
+    -break= 즉시 종료. 사용자에게 어떠한 알림도 주지 않고 즉시 반복문을 빠져나감
+    = 하단 수행부가 진행되지 않고 종료
+    */
+
+    let count = 0;      // 반복(추측) 횟수를 저장할 변수
+
+    let msg = "";       // 결과 메세지를 저장할 변수
+    do{
+        let input = prompt("1~100까지의 정수를 입력해 주세요.");
+        if(input == guess){
+            msg = "성공입니다.";
+            isRun = false;
+        }else if(input < guess){
+            msg = "낮습니다.";
+        }else{
+            msg = "높습니다.";
+        }
+        count++;
+        alert(msg + " - 추측 횟수 : " + count);
+    }while(isRun);
+    </script>
+</head>
+<body>
+</body>
+</html>
