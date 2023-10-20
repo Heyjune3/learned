@@ -70,7 +70,46 @@
             2. prompt를 이용해서 사용자에게 4개의 점수 (1~100)를 입력받아 배열에 저장.
             3. 배열에 저장된 점수들 중 값을 비교하여 최소값, 최대값을 구하시오.
         */
-       let A = prompt("1~100중 4개의 숫자를 입력하시오.")
+        let max, min;
+
+        let Score1, Score2, Score3, Score4, Score5;
+
+        Score1 = prompt("저장할 점수를 입력하시오.");
+        Score2 = prompt("저장할 점수를 입력하시오.");
+        Score3 = prompt("저장할 점수를 입력하시오.");
+        Score4 =  prompt("저장할 점수를 입력하시오.");
+        Score5 = prompt("저장할 점수를 입력하시오.");
+       
+        max = min = Score1;
+
+        if(Score2 > max){
+            max = Score2;
+        }
+        if(Score3 > max){
+            max = Score3;
+        }
+        if(Score4 > max){
+            max = Score4;
+        }
+        if(Score5 > max){
+            max = Score5;
+        }
+
+        if(min > Score2){
+            min = Score2;
+        }
+        if(min > Score3){
+            min = Score3;
+        }
+        if(min > Score4){
+            min = Score4;
+        }
+        if(min > Score5){
+            min = Score5;
+        }
+
+        document.write(`min score : ${min} <br/>`);
+        document.write(`max score : ${max} <br/>`);
     </script>
 </head>
 <body>
