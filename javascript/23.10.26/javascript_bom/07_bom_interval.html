@@ -1,0 +1,39 @@
+<DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8"/>
+    <title>window 내장 함수</title>
+    <script>
+        let interval;
+
+        function changeColor(){
+            interval = window.setInterval(function(){
+                let elem = document.querySelector("#target");
+                let c = elem.style.color;
+                //조건문 ? = 참이냐? 거짓이냐?
+                // 삼항 연산자(조건식1 ? "2" : "3")
+                // (조건식) ? 참일 때 대입될 값 : 거짓일 때 대입될 값;
+                elem.style.color = (c == "red") ? "blue" : "red";
+                /* 위와 같이 결과가 나오지만 if문
+                if(c == 'red'){
+                    elem.style.color = 'blue';
+                }else{
+                    elem.style.color = 'red';
+                }*/
+            },500);
+            
+        }
+
+        function stopTextColor(){
+            clearInterval(interval);
+        }
+
+    </script>
+</head>
+<body onload = "changeColor();">
+    <div id="target">
+        <p>this is paragraph</p>
+    </div>
+    <button onclick="stopTextColor();">stop</button>
+</body>
+</html>
