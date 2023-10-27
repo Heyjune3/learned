@@ -1,0 +1,30 @@
+<DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+<body>
+    <h1>Hover - 1</h1>
+    <h1>Hover - 2</h1>
+    <h1>Hover - 3</h1>
+    <script>
+        //               올라온 시점 ,  벗어난 시점
+        // $("h1").hover(function(){},function(){});
+        $("h1").hover(function(){
+            // $("h1") = 모든 h1 태그
+            // $(this) = h1 요소 각각 1개
+            $(this).css({
+                backgroundColor : "gray",
+                color : "white"
+            })
+        },function(){
+            $(this).css({
+                backgroundColor : "",
+                color : ""
+            })
+        });
+    </script>
+</body>
+</html>
